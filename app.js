@@ -40,5 +40,16 @@ app.post("/",function(req,res){
 	},function(){res.redirect('/')});
 })
 
+app.delete("/:id",function(req,res){
+	List.findByIdAndRemove(req.params.id,function(err,del){
+		if(err){
+			console.log(err);
+			res.redirect("/");
+		} else {
+			res.redirect("/");
+		}
+	});
+};
+
 // listen
 app.listen(3000)
