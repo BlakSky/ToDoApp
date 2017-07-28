@@ -1,13 +1,16 @@
-body{
-	background-color:black;
-	color: white;
-}
-
 #container{
 	text-align:center;
 	display:block;
 	width: 400px;
-	margin: 0 auto;
+	margin: 40px auto;
+}
+
+h1{
+	background-color: steelblue;
+	color: white;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .deleteForm{
@@ -19,6 +22,12 @@ body{
 	text-decoration:line-through;
 }
 
+ul{
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 li{
 	clear: both;
 	list-style: none;
@@ -27,21 +36,31 @@ li{
 }
 
 li:nth-child(2n){
-	background: white;
+	background: #f7f7f7;
 	color: black;
 }
 
 .deleteForm input{
 	font-size: 1.1em;
-	background-color:black;
+	background-color:steelblue;
 	color:white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .addForm{
 	height: 40px;
 	border: none;
+	background: #f7f7f7;
+	line-height: 40px;
 }
 
 .addForm input:focus{
 	outline: none;
+	background: #f7f7f7;
+}
+
+.addForm input[type="submit"]{
+	cursor: pointer;
 }
