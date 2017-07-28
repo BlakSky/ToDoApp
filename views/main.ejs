@@ -1,21 +1,21 @@
 <%include partials/header.ejs%>
+<div id="container">
+	<h1>Todo List</h1>
 
-<h1>Todo List</h1>
+	<form class="addForm" action="/" method="POST">
+		<input type="text" name="content" placeholder="Add To Do" autoFocus>
+		<input type="submit">
+	</form>
 
-<form action="/" method="POST">
-	<input type="text" name="content">
-	<input type="submit">
-</form>
-
-<div>
-	<ul>
-		<%lists.forEach(function(list){%>
-			<li> <%=list.do%> </li>
-			<form action="/<%=list._id%>?_method=DELETE" method="POST">
-				<input type="submit" value="&Cross;">
-			</form>
-		<%});%>
-	</ul>
+	<div>
+		<ul>
+			<%lists.forEach(function(list){%>
+				<li><%=list.do%> <form class="deleteForm" action="/<%=list._id%>?_method=DELETE" method="POST">
+					<input type="submit" value="&Cross;">
+				</form></li>
+				
+			<%});%>
+		</ul>
+	</div>
 </div>
-
 <%include partials/footer.ejs%>

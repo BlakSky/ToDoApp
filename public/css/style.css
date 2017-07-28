@@ -1,0 +1,47 @@
+body{
+	background-color:black;
+	color: white;
+}
+
+#container{
+	text-align:center;
+	display:block;
+	width: 400px;
+	margin: 0 auto;
+}
+
+.deleteForm{
+	display:inline;
+	float: right;
+}
+
+.strikeThrough{
+	text-decoration:line-through;
+}
+
+li{
+	clear: both;
+	list-style: none;
+	height: 40px;
+	line-height: 40px;
+}
+
+li:nth-child(2n){
+	background: white;
+	color: black;
+}
+
+.deleteForm input{
+	font-size: 1.1em;
+	background-color:black;
+	color:white;
+}
+
+.addForm{
+	height: 40px;
+	border: none;
+}
+
+.addForm input:focus{
+	outline: none;
+}
