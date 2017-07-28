@@ -1,9 +1,11 @@
 var express = require("express"),
 	app = express(),
 	bodyParser = require("body-parser"),
-	mongoose = require("mongoose");
+	mongoose = require("mongoose"),
+	methodOv = require("method-override");
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOv("_method"));
 app.use(express.static("public"));
 app.use(express.static("partials"));
 
@@ -49,7 +51,7 @@ app.delete("/:id",function(req,res){
 			res.redirect("/");
 		}
 	});
-};
+});
 
 // listen
 app.listen(3000)
